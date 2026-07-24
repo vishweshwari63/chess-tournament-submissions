@@ -1,8 +1,8 @@
 /**
  * Shuffles an array in place using the Fisher-Yates (Knuth) algorithm.
  * Guarantees cryptographic-quality unbiased randomization.
- * @param {Array} array - The array to shuffle.
- * @returns {Array} The dynamically shuffled array instance.
+ * @param {any[]} array - The array to shuffle.
+ * @returns {any[]} The dynamically shuffled array instance.
  */
 export function shuffleArray(array) {
 	let currentIndex = array.length, randomIndex;
@@ -18,7 +18,14 @@ export function shuffleArray(array) {
 	return array;
 }
 
+/**
+ * Generates tournament pairings for a provided list of players.
+ * @param {any[]} playerIds - The array of player IDs to pair up.
+ * @returns {any[]} Array of generated pairings with randomly generated match IDs.
+ */
 export function generatePairings(playerIds) {
+	if (!playerIds || playerIds.length === 0) return [];
+
 	const shuffled = shuffleArray([...playerIds]);
 	const pairings = [];
 	
