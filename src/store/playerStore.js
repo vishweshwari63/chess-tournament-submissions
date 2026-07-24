@@ -17,7 +17,13 @@ if (browser) {
 	});
 }
 
-// Derived store to automatically output ranked players based on points
+/**
+ * Derived algorithmic store that automatically outputs ranked players.
+ * Calculation priority: 
+ * 1. Total Tournament Points (3 per win, 1 per tie/bye)
+ * 2. Total Match Wins
+ * 3. Fallback: Base Initial Elo rating
+ */
 export const rankedPlayers = derived(playerStore, $players => {
 	return [...$players].sort((a, b) => {
 		// Primary sorting by tournament points
