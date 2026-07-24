@@ -1,3 +1,9 @@
+/**
+ * Shuffles an array in place using the Fisher-Yates (Knuth) algorithm.
+ * Guarantees cryptographic-quality unbiased randomization.
+ * @param {Array} array - The array to shuffle.
+ * @returns {Array} The dynamically shuffled array instance.
+ */
 export function shuffleArray(array) {
 	let currentIndex = array.length, randomIndex;
 
