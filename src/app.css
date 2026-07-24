@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Poppins:ital,wght@0,400;0,700;0,900;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --background: #0B0E14; /* Deep gaming dark */
+  --surface: #151A27;    /* Slightly lighter panel */
+  --surface-hover: #1E2536;
+  --primary: #7C3AED;    /* Electric Purple */
+  --primary-glow: #8B5CF6; 
+  --accent: #F43F5E;     /* Neon Rose/Pink */
+  --success: #10B981;    /* Vibrant Emerald */
+  --danger: #EF4444;     /* Red */
+  --gold: #FFD700;       /* Lightning Gold */
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+}
+
+:root {
+  color-scheme: dark;
+  background-color: var(--background);
+  color: var(--text-main);
+}
+
+body {
+  font-family: 'Outfit', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(244, 63, 94, 0.08), transparent 25%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Scrollbar for gaming vibe */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-glow);
+}
