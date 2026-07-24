@@ -1,5 +1,5 @@
 <script>
-	let { children, variant = 'primary', size = 'md', class: className = '', type = 'button', onclick, disabled = false } = $props();
+	let { children, variant = 'primary', size = 'md', class: className = '', type = 'button', onclick, disabled = false, ariaLabel } = $props();
 
 	const baseClasses = "relative inline-flex items-center gap-2 justify-center font-bold tracking-wide transition-all duration-300 active:scale-90 disabled:opacity-50 disabled:pointer-events-none rounded-2xl overflow-hidden before:absolute before:inset-0 before:transition-all before:duration-300";
 	
@@ -21,6 +21,7 @@
 <button 
 	{type}
 	{disabled}
+	aria-label={ariaLabel}
 	class="{baseClasses} {variants[variant]} {sizes[size]} {className}" 
 	{onclick}
 >
